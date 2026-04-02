@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZOE | Transformative Coaching</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Space+Mono&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --accent: #0047FF; /* Electric Blue */
+            --black: #000000;
+            --bg: #F8F8F8;
+        }
+
+        body {
+            font-family: 'Bricolage Grotesque', sans-serif;
+            background-color: var(--bg);
+            color: var(--black);
+            overflow-x: hidden;
+        }
+
+        .mono { font-family: 'Space Mono', monospace; }
+
+        /* Neo-Brutalist Border & Shadow */
+        .brutal-card {
+            background: white;
+            border: 2px solid var(--black);
+            box-shadow: 8px 8px 0px 0px var(--black);
+            transition: all 0.15s ease-in-out;
+            position: relative;
+        }
+
+        .brutal-card:hover {
+            transform: translate(4px, 4px);
+            box-shadow: 0px 0px 0px 0px var(--black);
+        }
+
+        .brutal-btn {
+            background: var(--accent);
+            color: white;
+            border: 2px solid var(--black);
+            box-shadow: 4px 4px 0px 0px var(--black);
+            transition: all 0.1s;
+            display: inline-block;
+            font-weight: 800;
+            text-transform: uppercase;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        .brutal-btn:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 0px 0px 0px 0px var(--black);
+        }
+
+        /* Window Header UI Style */
+        .window-header {
+            border-bottom: 2px solid black;
+            padding: 10px 14px;
+            display: flex;
+            gap: 8px;
+            background: white;
+            position: relative;
+            z-index: 10;
+        }
+        .dot { width: 12px; height: 12px; border-radius: 50%; border: 2px solid black; }
+
+        /* Marquee Animation */
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 20s linear infinite;
+        }
+
+        /* Portrait Image Handling */
+        .portrait-container {
+            width: 100%;
+            aspect-ratio: 3 / 4; /* Perfect Portrait Ratio */
+            overflow: hidden;
+            display: flex;
+        }
+        .portrait-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Hides white bits, fills frame */
+            object-position: center 20%; /* Focus on face */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white border-b-2 border-black py-4 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-3xl font-black italic tracking-tighter">ZOE.SYS</a>
+            <div class="hidden md:flex space-x-10 mono font-bold text-sm uppercase">
+                <a href="#about" class="hover:text-blue-600 transition">01 About</a>
+                <a href="#services" class="hover:text-blue-600 transition">02 Services</a>
+                <a href="#clients" class="hover:text-blue-600 transition">03 Clients</a>
+            </div>
+            <a href="https://calendly.com/zoebrowncoaching/15-minute-meeting-clone" target="_blank" class="brutal-btn py-2 px-6 text-sm">Book Call</a>
+        </div>
+    </nav>
+
+    <!-- Hero / About Me Header -->
+    <section id="about" class="pt-40 pb-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-12 gap-12 items-center">
+            
+            <!-- Left Side: Large Portrait Image -->
+            <div class="md:col-span-5" data-aos="fade-right">
+                <div class="brutal-card">
+                    <div class="window-header">
+                        <div class="dot bg-[#FF5F56]"></div>
+                        <div class="dot bg-[#FFBD2E]"></div>
+                        <div class="dot bg-[#27C93F]"></div>
+                        <span class="mono text-[11px] ml-auto font-bold uppercase opacity-50 tracking-widest">ZOE_PORTRAIT.JPG</span>
+                    </div>
+                    <div class="portrait-container">
+                        <img src="https://i.postimg.cc/xXp70xKX/Screenshot-2024-08-19-at-14-49-03.png" alt="Zoe Profile">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Intro -->
+            <div class="md:col-span-7" data-aos="fade-up">
+                <div class="inline-block bg-black text-white px-3 py-1 mono text-xs mb-6">STATUS: ACCEPTING CLIENTS</div>
+                <h1 class="text-6xl md:text-8xl font-black leading-none mb-6">
+                    RADICAL <br> <span class="text-blue-600">GROWTH</span> <br> FOR YOU.
+                </h1>
+                <p class="text-xl md:text-2xl font-bold leading-tight max-w-xl mb-8">
+                    I'm Zoe. I help creatives, entrepreneurs, and outliers navigate the beautiful, messy middle of transformation.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="https://instagram.com/misszoee" target="_blank" class="brutal-btn bg-white !text-black px-6 py-2 text-sm">Instagram ↗</a>
+                    <a href="https://linkedin.com/zoebrown03" target="_blank" class="brutal-btn bg-white !text-black px-6 py-2 text-sm">LinkedIn ↗</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="border-y-2 border-black bg-white py-6 overflow-hidden">
+        <div class="flex whitespace-nowrap animate-marquee mono font-black uppercase text-3xl">
+            <span class="mx-12 italic text-blue-600">✦ Transform your reality</span>
+            <span class="mx-12">✦ Coaching for the outliers</span>
+            <span class="mx-12 italic text-blue-600">✦ Break the loop</span>
+            <span class="mx-12">✦ Stay Quirky</span>
+            <!-- Duplicated for seamless loop -->
+            <span class="mx-12 italic text-blue-600">✦ Transform your reality</span>
+            <span class="mx-12">✦ Coaching for the outliers</span>
+            <span class="mx-12 italic text-blue-600">✦ Break the loop</span>
+            <span class="mx-12">✦ Stay Quirky</span>
+        </div>
+    </div>
+
+    <!-- Services -->
+    <section id="services" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-5xl font-black mb-16 uppercase italic">The Menu</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Service 1 -->
+                <div class="brutal-card p-10 bg-blue-600 text-white flex flex-col justify-between min-h-[400px]" data-aos="zoom-in">
+                    <div>
+                        <h3 class="text-3xl font-black mb-4 uppercase italic">01. Discovery</h3>
+                        <p class="mono text-sm opacity-90 leading-relaxed">A high-intensity 15-minute call to identify your biggest bottlenecks. Immediate clarity, zero fluff.</p>
+                    </div>
+                    <a href="https://calendly.com/zoebrowncoaching/15-minute-meeting-clone" target="_blank" class="brutal-btn bg-white text-black w-full mt-8">Book 15m Call</a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="brutal-card p-10 bg-white flex flex-col justify-between min-h-[400px]" data-aos="zoom-in" data-aos-delay="100">
+                    <div>
+                        <h3 class="text-3xl font-black mb-4 uppercase italic">02. 1:1 Series</h3>
+                        <p class="mono text-sm opacity-60 leading-relaxed">Personalized transformation systems designed to unstick your creative process and scale your life.</p>
+                    </div>
+                    <a href="mailto:zoe.sj.brown@gmail.com" target="_blank" class="brutal-btn w-full mt-8">Inquire Now</a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="brutal-card p-10 bg-white flex flex-col justify-between min-h-[400px] opacity-60" data-aos="zoom-in" data-aos-delay="200">
+                    <div>
+                        <h3 class="text-3xl font-black mb-4 uppercase italic">03. Workshops</h3>
+                        <p class="mono text-sm opacity-60 leading-relaxed">Collaborative sessions for creative teams and collective growth. Build better, together.</p>
+                    </div>
+                    <button disabled class="brutal-btn w-full mt-8 bg-gray-200 !text-gray-500 !shadow-none !cursor-not-allowed">Coming Soon</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="clients" class="py-24 px-6 bg-black text-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-end mb-20">
+                <h2 class="text-6xl font-black italic uppercase">The Proof</h2>
+                <span class="mono text-blue-400 font-bold">[ 2024 LOG_FILE ]</span>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-16">
+                <div class="border-l-8 border-blue-600 pl-10 py-6" data-aos="fade-left">
+                    <p class="text-3xl font-bold mb-6">"Zoe's approach is like a software update for your brain. I stopped procrastinating and started building."</p>
+                    <span class="mono text-sm uppercase opacity-50 tracking-widest">— Alex R., Creative Director</span>
+                </div>
+                <div class="border-l-8 border-blue-600 pl-10 py-6" data-aos="fade-left" data-aos-delay="200">
+                    <p class="text-3xl font-bold mb-6">"Finally, a coach who understands how creative minds work. No corporate jargon, just results."</p>
+                    <span class="mono text-sm uppercase opacity-50 tracking-widest">— Jamie L., Founder</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20 border-t-2 border-black text-center px-6 bg-white">
+        <h2 class="text-3xl md:text-5xl font-black mb-12 italic uppercase">Let's build your new reality.</h2>
+        <div class="flex justify-center space-x-12 mono font-black uppercase text-sm mb-12">
+            <a href="https://instagram.com/misszoee" class="hover:text-blue-600 underline decoration-2 underline-offset-4">Instagram</a>
+            <a href="https://linkedin.com/zoebrown03" class="hover:text-blue-600 underline decoration-2 underline-offset-4">LinkedIn</a>
+            <a href="mailto:zoe.sj.brown@gmail.com" class="hover:text-blue-600 underline decoration-2 underline-offset-4">Email</a>
+        </div>
+        <p class="mono text-[11px] opacity-40 font-bold uppercase tracking-[0.2em]">© 2026 ZOE_TRANSFORMATION_SYSTEMS. ALL SYSTEMS GO.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ 
+            duration: 1000, 
+            once: true,
+            easing: 'ease-out-back'
+        });
+    </script>
+</body>
+</html>
