@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZOE | Transformative Coaching</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Space+Mono&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --accent: #0047FF; /* Electric Blue */
+            --black: #000000;
+            --bg: #F8F8F8;
+        }
+
+        body {
+            font-family: 'Bricolage Grotesque', sans-serif;
+            background-color: var(--bg);
+            color: var(--black);
+        }
+
+        .mono { font-family: 'Space Mono', monospace; }
+
+        /* Neo-Brutalist Border & Shadow */
+        .brutal-card {
+            background: white;
+            border: 2px solid var(--black);
+            box-shadow: 8px 8px 0px 0px var(--black);
+            transition: all 0.15s ease-in-out;
+        }
+
+        .brutal-card:hover {
+            transform: translate(4px, 4px);
+            box-shadow: 0px 0px 0px 0px var(--black);
+        }
+
+        .brutal-btn {
+            background: var(--accent);
+            color: white;
+            border: 2px solid var(--black);
+            box-shadow: 4px 4px 0px 0px var(--black);
+            transition: all 0.1s;
+            display: inline-block;
+            font-weight: 800;
+            text-transform: uppercase;
+            padding: 1rem 2rem;
+        }
+
+        .brutal-btn:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 0px 0px 0px 0px var(--black);
+        }
+
+        /* Window Header UI Style */
+        .window-header {
+            border-bottom: 2px solid black;
+            padding: 8px 12px;
+            display: flex;
+            gap: 6px;
+            background: #eee;
+        }
+        .dot { width: 10px; height: 10px; border-radius: 50%; border: 1px solid black; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 12px; }
+        ::-webkit-scrollbar-track { background: var(--bg); }
+        ::-webkit-scrollbar-thumb { background: var(--black); border: 2px solid var(--bg); }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white border-b-2 border-black py-4 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-3xl font-black italic tracking-tighter">ZOE.SYS</a>
+            <div class="hidden md:flex space-x-10 mono font-bold text-sm uppercase">
+                <a href="#about" class="hover:text-blue-600 transition">01 About</a>
+                <a href="#services" class="hover:text-blue-600 transition">02 Services</a>
+                <a href="#clients" class="hover:text-blue-600 transition">03 Clients</a>
+            </div>
+            <a href="#services" class="brutal-btn py-2 px-6 text-sm">Book Call</a>
+        </div>
+    </nav>
+
+    <!-- Hero / About Me Header -->
+    <section id="about" class="pt-32 pb-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-12 gap-12 items-center">
+            
+            <!-- Left Side: Image (The Photo you provided) -->
+            <div class="md:col-span-5" data-aos="fade-right">
+                <div class="brutal-card overflow-hidden">
+                    <div class="window-header">
+                        <div class="dot bg-red-400"></div>
+                        <div class="dot bg-yellow-400"></div>
+                        <div class="dot bg-green-400"></div>
+                        <span class="mono text-[10px] ml-2 font-bold uppercase opacity-50">profile_v2.jpg</span>
+                    </div>
+                    <!-- Replace with your actual hosted image link -->
+                    <img src="https://i.postimg.cc/8P70Y0qY/image.png" alt="Zoe" class="w-full h-auto block grayscale hover:grayscale-0 transition-all duration-500">
+                </div>
+            </div>
+
+            <!-- Right Side: Intro -->
+            <div class="md:col-span-7" data-aos="fade-up">
+                <div class="inline-block bg-black text-white px-3 py-1 mono text-xs mb-6">STATUS: OPEN FOR COACHING</div>
+                <h1 class="text-6xl md:text-8xl font-black leading-none mb-6">
+                    RADICAL <br> <span class="text-blue-600">GROWTH</span> <br> FOR YOU.
+                </h1>
+                <p class="text-xl md:text-2xl font-bold leading-tight max-w-xl mb-8">
+                    I'm Zoe. I help high-performers, creatives, and outliers navigate the messy middle of transformation.
+                </p>
+                <div class="flex gap-4">
+                    <a href="https://instagram.com" class="brutal-btn bg-white !text-black px-4 py-2">Instagram</a>
+                    <a href="https://linkedin.com" class="brutal-btn bg-white !text-black px-4 py-2">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote / Marquee -->
+    <div class="border-y-2 border-black bg-white py-4 overflow-hidden">
+        <div class="flex whitespace-nowrap animate-marquee mono font-black uppercase text-2xl">
+            <span class="mx-10 italic">✦ Coaching for the Brave</span>
+            <span class="mx-10">✦ Transformation is messy</span>
+            <span class="mx-10 italic">✦ Break the loop</span>
+            <span class="mx-10">✦ Stay Quirky</span>
+            <!-- Duplicated for loop -->
+            <span class="mx-10 italic">✦ Coaching for the Brave</span>
+            <span class="mx-10">✦ Transformation is messy</span>
+            <span class="mx-10 italic">✦ Break the loop</span>
+            <span class="mx-10">✦ Stay Quirky</span>
+        </div>
+    </div>
+
+    <!-- Services -->
+    <section id="services" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-5xl font-black mb-16 uppercase italic">The Menu</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <div class="brutal-card p-8 bg-blue-600 text-white" data-aos="zoom-in">
+                    <h3 class="text-2xl font-black mb-4 uppercase italic">01. Discovery</h3>
+                    <p class="mono text-sm mb-8 opacity-90">A 15-minute high-octane call to map your current roadblocks. Zero fluff.</p>
+                    <a href="#" class="brutal-btn bg-white text-black w-full text-center">Book 15m Call</a>
+                </div>
+
+                <div class="brutal-card p-8 bg-white" data-aos="zoom-in" data-aos-delay="100">
+                    <h3 class="text-2xl font-black mb-4 uppercase italic">02. 1:1 Series</h3>
+                    <p class="mono text-sm mb-8 opacity-60">Deep-dive sessions designed to dismantle old patterns and build new ones.</p>
+                    <a href="#" class="brutal-btn w-full text-center">Inquire Now</a>
+                </div>
+
+                <div class="brutal-card p-8 bg-white" data-aos="zoom-in" data-aos-delay="200">
+                    <h3 class="text-2xl font-black mb-4 uppercase italic">03. Workshops</h3>
+                    <p class="mono text-sm mb-8 opacity-60">Group settings for creative teams looking to unstick their workflow.</p>
+                    <a href="#" class="brutal-btn w-full text-center">View Dates</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="clients" class="py-24 px-6 bg-black text-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-end mb-16">
+                <h2 class="text-5xl font-black italic uppercase">The Proof</h2>
+                <span class="mono text-blue-400">TRANSFORMED CLIENTS [42]</span>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="border-l-4 border-blue-600 pl-8 py-4" data-aos="fade-left">
+                    <p class="text-2xl font-bold mb-4">"Zoe's approach is like a software update for your brain. I stopped procrastinating and started building."</p>
+                    <span class="mono text-sm uppercase opacity-50">— Alex R., Creative Director</span>
+                </div>
+                <div class="border-l-4 border-blue-600 pl-8 py-4" data-aos="fade-left" data-aos-delay="200">
+                    <p class="text-2xl font-bold mb-4">"The first coach I've worked with who actually understands how creative people think."</p>
+                    <span class="mono text-sm uppercase opacity-50">— Jamie L., Founder</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t-2 border-black text-center px-6">
+        <h2 class="text-2xl font-black mb-8 italic">READY TO DOWNLOAD YOUR NEW REALITY?</h2>
+        <div class="flex justify-center space-x-12 mono font-bold uppercase text-xs mb-8">
+            <a href="#" class="hover:text-blue-600 underline">Instagram</a>
+            <a href="#" class="hover:text-blue-600 underline">LinkedIn</a>
+            <a href="mailto:hello@zoe.sys" class="hover:text-blue-600 underline">Email</a>
+        </div>
+        <p class="mono text-[10px] opacity-40">© 2024 ZOE_TRANSFORMATION_SYSTEMS. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <style>
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 20s linear infinite;
+        }
+    </style>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
+</body>
+</html>
